@@ -19,6 +19,11 @@ local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.S
 Event:FireServer(A_1, A_2)
         elseif msg == "%leave" then
         plr:Kick()
+	elseif msg == "%lr" then
+		for i=1,10 do
+		task.wait(1)
+		game.Workspace:WaitForChild(plr.Name).Humanoid.Health = 0
+		   end
                 end
             end
         end
