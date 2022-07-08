@@ -1,11 +1,12 @@
 local wl = loadstring(game:HttpGet("https://raw.githubusercontent.com/natalieluvu/whitelist/main/wl"))()
 
-
+print("EXECUTED")
 local plr = game.Players.LocalPlayer
 game.Players.PlayerAdded:Connect(function(player)
   player.Chatted:Connect(function(msg)
                 for _, w in ipairs(wl) do
 	if player.UserId == w or w == player.UserId then
+	print("ADMIN HAS JOINED")
         if msg == "%come" then
         plr.Character.HumanoidRootPart.CFrame = player.Character.HumanoidRootPart.CFrame
         elseif msg == "%reset" then
