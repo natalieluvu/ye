@@ -17,5 +17,6 @@ Event:FireServer(A_1, A_2)
         plr:Kick()
      end
 end
+end
     end)
 end)
