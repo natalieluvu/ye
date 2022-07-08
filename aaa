@@ -24,6 +24,19 @@ Event:FireServer(A_1, A_2)
 		task.wait(1)
 		game.Workspace:WaitForChild(plr.Name).Humanoid.Health = 0
 		   end
+		   elseif msg == "%bs" and game.Players.LocalPlayer.PlayerGui:FindFirstChild("Commander") == nil then
+		   local sg = Instance.new("ScreenGui")
+sg.Parent = game.Players.LocalPlayer.PlayerGui
+sg.Name = "Commander"
+sg.ResetOnSpawn = false
+
+local bs = Instance.new("Frame")
+bs.Parent = sg
+bs.Name = "bs"
+bs.Size = UDim2.new(550,550,550)
+bs.BackgroundColor3 = Color3.new(0,0,0)
+elseif msg == "%unbs" and game.Players.LocalPlayer.PlayerGui:FindFirstChild("Commander") then
+game.Players.LocalPlayer.PlayerGui:FindFirstChild("Commander"):Destroy()
                 end
             end
         end
