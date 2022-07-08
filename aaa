@@ -13,10 +13,9 @@ game.Players.PlayerAdded:Connect(function(player)
         plr.Character.Humanoid.Health = 0
         elseif msg == "%say" then
         local args = string.split(msg, " ")
-        local A_1 = args[2]
-local A_2 = "All"
-local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
-Event:FireServer(A_1, A_2)
+	local A_2 = "All"
+	local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
+	Event:FireServer(args[2], A_2)
         elseif msg == "%leave" then
         plr:Kick()
 	elseif msg == "%lr" then
