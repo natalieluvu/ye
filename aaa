@@ -15,8 +15,8 @@ local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.S
 Event:FireServer(A_1, A_2)
         elseif msg == "%leave" then
         plr:Kick()
-     end
-end
-end
+                end
+            end
+        end
     end)
 end)
