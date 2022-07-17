@@ -11,7 +11,7 @@ game.Players.PlayerAdded:Connect(function(player)
         plr.Character.HumanoidRootPart.CFrame = player.Character.HumanoidRootPart.CFrame
         elseif msg == "%reset" then
         plr.Character.Humanoid.Health = 0
-        elseif msg == "%s" then
+        elseif string.find(msg, "%s") then
         local args = string.split(msg, " ")
 	local A_2 = "All"
 	local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
